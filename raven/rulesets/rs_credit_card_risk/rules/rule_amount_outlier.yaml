@@ -8,6 +8,11 @@ ruleset_id: rs_credit_card_risk
 input_variable_ids:
   - var_transaction_amount
   - var_average_ticket_amount
-outcome: add_risk_points
-points: 35
+output_variable_ids:
+  - var_risk_score
+document:
+  format: raven_rule_logic_v1
+  source: |
+    WHEN Transaction.transaction_amount > Profile.average_ticket_amount * 4
+    THEN ADD_RISK_POINTS 35 TO var_risk_score REASON amount_outlier
 description: Adds risk when the amount is several times above the cardholder average.
