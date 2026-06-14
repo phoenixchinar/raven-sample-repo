@@ -5,5 +5,5 @@ name: merchant_category
 display_name: Merchant Category
 state: ready
 record_id: rec_credit_card_transaction
-data_type: string
+type: string
 description: Merchant category code or normalized category label.

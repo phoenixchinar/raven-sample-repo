@@ -9,9 +9,11 @@ input_variable_ids:
   - var_merchant_country
 output_variable_ids:
   - var_risk_score
+  - var_risk_reason_code
 document:
   format: raven_rule_logic_v1
   source: |
     WHEN Transaction.merchant_country != "US"
-    THEN ADD_RISK_POINTS 10 TO var_risk_score REASON cross_border
+    THEN SET RiskAssessment.risk_score = RiskAssessment.risk_score + 10
+      SET RiskAssessment.risk_reason_code = "cross_border"
 description: Adds risk when the merchant country differs from the domestic profile.

@@ -9,9 +9,11 @@ input_variable_ids:
   - var_recent_chargeback_count
 output_variable_ids:
   - var_risk_score
+  - var_risk_reason_code
 document:
   format: raven_rule_logic_v1
   source: |
     WHEN Profile.recent_chargeback_count > 0
-    THEN ADD_RISK_POINTS 15 TO var_risk_score REASON chargeback_history
+    THEN SET RiskAssessment.risk_score = RiskAssessment.risk_score + 15
+      SET RiskAssessment.risk_reason_code = "chargeback_history"
 description: Adds risk when recent chargebacks exist on the cardholder profile.

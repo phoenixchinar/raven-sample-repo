@@ -5,5 +5,5 @@ name: requires_manual_review
 display_name: Requires Manual Review
 state: ready
 record_id: rec_risk_assessment
-data_type: boolean
+type: boolean
 description: Indicates whether the transaction should enter manual review.

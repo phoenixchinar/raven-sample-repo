@@ -5,7 +5,7 @@ name: risk_decision
 display_name: Risk Decision
 state: ready
 record_id: rec_risk_assessment
-data_type: string
+type: string
 allowed_values:
   - approve
   - review

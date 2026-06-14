@@ -10,9 +10,11 @@ input_variable_ids:
   - var_device_trust_score
 output_variable_ids:
   - var_risk_score
+  - var_risk_reason_code
 document:
   format: raven_rule_logic_v1
   source: |
     WHEN Transaction.card_present = false AND Transaction.device_trust_score < 0.50
-    THEN ADD_RISK_POINTS 20 TO var_risk_score REASON low_device_trust
+    THEN SET RiskAssessment.risk_score = RiskAssessment.risk_score + 20
+      SET RiskAssessment.risk_reason_code = "low_device_trust"
 description: Adds risk for card-not-present transactions from low-trust devices.

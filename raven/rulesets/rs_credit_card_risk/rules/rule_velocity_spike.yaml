@@ -9,9 +9,11 @@ input_variable_ids:
   - var_transaction_velocity_1h
 output_variable_ids:
   - var_risk_score
+  - var_risk_reason_code
 document:
   format: raven_rule_logic_v1
   source: |
     WHEN Transaction.transaction_velocity_1h >= 5
-    THEN ADD_RISK_POINTS 25 TO var_risk_score REASON velocity_spike
+    THEN SET RiskAssessment.risk_score = RiskAssessment.risk_score + 25
+      SET RiskAssessment.risk_reason_code = "velocity_spike"
 description: Adds risk when the account has repeated authorization attempts in the last hour.

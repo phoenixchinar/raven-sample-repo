@@ -5,5 +5,5 @@ name: card_present
 display_name: Card Present
 state: ready
 record_id: rec_credit_card_transaction
-data_type: boolean
+type: boolean
 description: Indicates whether the card was physically present.

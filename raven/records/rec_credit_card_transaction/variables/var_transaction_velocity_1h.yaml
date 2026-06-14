@@ -5,5 +5,5 @@ name: transaction_velocity_1h
 display_name: Transaction Velocity 1h
 state: ready
 record_id: rec_credit_card_transaction
-data_type: integer
+type: integer
 description: Count of recent authorization attempts in the previous hour.

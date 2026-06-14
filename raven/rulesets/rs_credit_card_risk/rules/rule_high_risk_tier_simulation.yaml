@@ -1,0 +1,20 @@
+api_version: raven.resource/v1
+kind: rule
+id: rule_high_risk_tier_simulation
+name: high_risk_tier_simulation
+display_name: High Risk Tier Simulation
+state: ready
+ruleset_id: rs_credit_card_risk
+simulation: true
+input_variable_ids:
+  - var_customer_risk_tier
+output_variable_ids:
+  - var_risk_score
+  - var_risk_reason_code
+document:
+  format: raven_rule_logic_v1
+  source: |
+    WHEN Transaction.customer_risk_tier = "high"
+    THEN SET RiskAssessment.risk_score = RiskAssessment.risk_score + 30
+      SET RiskAssessment.risk_reason_code = "high_risk_tier_simulation"
+description: Simulation-only rule used to test satisfied-condition logging without applying updates.

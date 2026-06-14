@@ -5,5 +5,5 @@ name: account_age_days
 display_name: Account Age Days
 state: ready
 record_id: rec_cardholder_profile
-data_type: integer
+type: integer
 description: Age of the cardholder account in days.

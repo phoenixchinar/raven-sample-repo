@@ -5,5 +5,5 @@ name: device_trust_score
 display_name: Device Trust Score
 state: ready
 record_id: rec_credit_card_transaction
-data_type: decimal
+type: decimal
 description: Normalized trust score for the device or channel context.

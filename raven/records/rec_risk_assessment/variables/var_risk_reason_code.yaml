@@ -5,5 +5,5 @@ name: risk_reason_code
 display_name: Risk Reason Code
 state: ready
 record_id: rec_risk_assessment
-data_type: string
+type: string
 description: Primary reason code explaining the risk decision.

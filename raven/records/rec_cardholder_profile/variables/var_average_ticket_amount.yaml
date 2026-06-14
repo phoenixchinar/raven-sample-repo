@@ -5,6 +5,6 @@ name: average_ticket_amount
 display_name: Average Ticket Amount
 state: ready
 record_id: rec_cardholder_profile
-data_type: decimal
+type: decimal
 unit: USD
 description: Historical average transaction amount for this cardholder.

@@ -20,6 +20,13 @@ The repository is intended for VS Code Web authoring with the RAVEN extension. R
 - `raven/rulesets/` contains the risk policy ruleset
 - `raven/transactions/` contains the transaction graph
 
+## IntelliSense Exercise Points
+
+- Variable files under `raven/records/**/variables/*.yaml` use `type:` so the RAVEN extension can infer the variable resource from the path and offer valid type values.
+- Module files use `module_type:` to exercise module enum completions.
+- `rule_high_risk_tier_simulation.yaml` sets `simulation: true`, so rule condition logging can be tested without applying variable updates.
+- Rule documents use the generic `WHEN ... THEN SET ...` business logic format.
+
 ## Authoring Rules
 
 - Use immutable IDs for relationships.

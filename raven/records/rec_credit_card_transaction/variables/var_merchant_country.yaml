@@ -5,5 +5,5 @@ name: merchant_country
 display_name: Merchant Country
 state: ready
 record_id: rec_credit_card_transaction
-data_type: string
+type: string
 description: ISO country code for the merchant location.

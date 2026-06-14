@@ -5,5 +5,5 @@ name: recent_chargeback_count
 display_name: Recent Chargeback Count
 state: ready
 record_id: rec_cardholder_profile
-data_type: integer
+type: integer
 description: Chargebacks recorded for the cardholder in the recent risk window.
