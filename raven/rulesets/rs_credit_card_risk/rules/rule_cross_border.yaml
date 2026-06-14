@@ -7,6 +7,11 @@ state: ready
 ruleset_id: rs_credit_card_risk
 input_variable_ids:
   - var_merchant_country
-outcome: add_risk_points
-points: 10
+output_variable_ids:
+  - var_risk_score
+document:
+  format: raven_rule_logic_v1
+  source: |
+    WHEN Transaction.merchant_country != "US"
+    THEN ADD_RISK_POINTS 10 TO var_risk_score REASON cross_border
 description: Adds risk when the merchant country differs from the domestic profile.
