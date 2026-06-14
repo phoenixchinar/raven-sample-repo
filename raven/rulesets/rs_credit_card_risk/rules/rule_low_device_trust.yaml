@@ -8,6 +8,11 @@ ruleset_id: rs_credit_card_risk
 input_variable_ids:
   - var_card_present
   - var_device_trust_score
-outcome: add_risk_points
-points: 20
+output_variable_ids:
+  - var_risk_score
+document:
+  format: raven_rule_logic_v1
+  source: |
+    WHEN Transaction.card_present = false AND Transaction.device_trust_score < 0.50
+    THEN ADD_RISK_POINTS 20 TO var_risk_score REASON low_device_trust
 description: Adds risk for card-not-present transactions from low-trust devices.
