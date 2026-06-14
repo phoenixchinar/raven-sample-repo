@@ -5,9 +5,13 @@ name: risk_decision
 display_name: Risk Decision
 state: ready
 record_id: rec_risk_assessment
-type: string
-allowed_values:
-  - approve
-  - review
-  - decline
+type: enum
+nullable: false
+enum_values:
+  - value: approve
+    display_name: Approve
+  - value: review
+    display_name: Review
+  - value: decline
+    display_name: Decline
 description: Decision returned to the authorization workflow.

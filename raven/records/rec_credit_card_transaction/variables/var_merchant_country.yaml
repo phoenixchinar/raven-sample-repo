@@ -6,4 +6,9 @@ display_name: Merchant Country
 state: ready
 record_id: rec_credit_card_transaction
 type: string
+nullable: false
+constraints:
+  min_length: 2
+  max_length: 2
+  pattern: "^[A-Z]{2}$"
 description: ISO country code for the merchant location.

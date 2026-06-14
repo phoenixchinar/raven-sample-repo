@@ -6,4 +6,8 @@ display_name: Risk Score
 state: ready
 record_id: rec_risk_assessment
 type: integer
+nullable: false
+constraints:
+  minimum: 0
+  maximum: 100
 description: Final normalized risk score from 0 to 100.

@@ -6,4 +6,7 @@ display_name: Merchant Category
 state: ready
 record_id: rec_credit_card_transaction
 type: string
+nullable: false
+constraints:
+  max_length: 64
 description: Merchant category code or normalized category label.

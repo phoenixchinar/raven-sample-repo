@@ -5,9 +5,13 @@ name: customer_risk_tier
 display_name: Customer Risk Tier
 state: ready
 record_id: rec_credit_card_transaction
-type: string
-allowed_values:
-  - low
-  - standard
-  - high
+type: enum
+nullable: true
+enum_values:
+  - value: low
+    display_name: Low
+  - value: standard
+    display_name: Standard
+  - value: high
+    display_name: High
 description: Current customer risk tier from the issuing bank profile.

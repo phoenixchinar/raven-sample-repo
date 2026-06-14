@@ -6,4 +6,7 @@ display_name: Risk Reason Code
 state: ready
 record_id: rec_risk_assessment
 type: string
+nullable: true
+constraints:
+  max_length: 64
 description: Primary reason code explaining the risk decision.

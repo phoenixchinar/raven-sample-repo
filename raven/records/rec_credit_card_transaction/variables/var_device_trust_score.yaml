@@ -6,4 +6,10 @@ display_name: Device Trust Score
 state: ready
 record_id: rec_credit_card_transaction
 type: decimal
+nullable: false
+constraints:
+  minimum: 0
+  maximum: 1
+  precision: 5
+  scale: 4
 description: Normalized trust score for the device or channel context.
