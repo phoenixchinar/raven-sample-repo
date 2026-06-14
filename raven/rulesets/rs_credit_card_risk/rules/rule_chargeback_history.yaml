@@ -7,6 +7,11 @@ state: ready
 ruleset_id: rs_credit_card_risk
 input_variable_ids:
   - var_recent_chargeback_count
-outcome: add_risk_points
-points: 15
+output_variable_ids:
+  - var_risk_score
+document:
+  format: raven_rule_logic_v1
+  source: |
+    WHEN Profile.recent_chargeback_count > 0
+    THEN ADD_RISK_POINTS 15 TO var_risk_score REASON chargeback_history
 description: Adds risk when recent chargebacks exist on the cardholder profile.
