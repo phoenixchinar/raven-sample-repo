@@ -1,0 +1,21 @@
+api_version: raven.resource/v1
+kind: variable_logic
+id: vlogic_requires_manual_review
+name: requires_manual_review_logic
+display_name: Requires Manual Review Logic
+state: ready
+record_id: rec_risk_assessment
+variable_id: var_requires_manual_review
+execution_role: compute_output_variable
+document:
+  format: raven_text_logic_v1
+  source: |
+    SET RiskAssessment.requires_manual_review =
+      RiskAssessment.risk_decision = "review"
+module_attachment:
+  status: attached
+  module_id: mod_score_credit_card_risk
+  module_output_id: mout_risk_assessment
+  output_record_id: rec_risk_assessment
+  output_value_source: computed
+  logic_requirement: required

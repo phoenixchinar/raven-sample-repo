@@ -1,0 +1,13 @@
+api_version: raven.resource/v1
+kind: variable
+id: var_risk_decision
+name: risk_decision
+display_name: Risk Decision
+state: ready
+record_id: rec_risk_assessment
+data_type: string
+allowed_values:
+  - approve
+  - review
+  - decline
+description: Decision returned to the authorization workflow.

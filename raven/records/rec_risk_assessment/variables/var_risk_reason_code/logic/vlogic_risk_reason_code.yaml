@@ -1,0 +1,24 @@
+api_version: raven.resource/v1
+kind: variable_logic
+id: vlogic_risk_reason_code
+name: risk_reason_code_logic
+display_name: Risk Reason Code Logic
+state: ready
+record_id: rec_risk_assessment
+variable_id: var_risk_reason_code
+execution_role: compute_output_variable
+document:
+  format: raven_text_logic_v1
+  source: |
+    SET RiskAssessment.risk_reason_code =
+      "velocity_spike" WHEN Transaction.transaction_velocity_1h >= 5
+      ELSE "amount_outlier" WHEN Transaction.transaction_amount > Profile.average_ticket_amount * 4
+      ELSE "low_device_trust" WHEN Transaction.device_trust_score < 0.50
+      ELSE "profile_history"
+module_attachment:
+  status: attached
+  module_id: mod_score_credit_card_risk
+  module_output_id: mout_risk_assessment
+  output_record_id: rec_risk_assessment
+  output_value_source: computed
+  logic_requirement: required

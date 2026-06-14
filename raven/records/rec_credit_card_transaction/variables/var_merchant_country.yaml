@@ -1,0 +1,9 @@
+api_version: raven.resource/v1
+kind: variable
+id: var_merchant_country
+name: merchant_country
+display_name: Merchant Country
+state: ready
+record_id: rec_credit_card_transaction
+data_type: string
+description: ISO country code for the merchant location.

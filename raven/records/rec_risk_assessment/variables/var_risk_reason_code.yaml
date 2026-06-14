@@ -1,0 +1,9 @@
+api_version: raven.resource/v1
+kind: variable
+id: var_risk_reason_code
+name: risk_reason_code
+display_name: Risk Reason Code
+state: ready
+record_id: rec_risk_assessment
+data_type: string
+description: Primary reason code explaining the risk decision.

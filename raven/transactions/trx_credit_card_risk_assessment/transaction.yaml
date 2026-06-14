@@ -1,0 +1,7 @@
+api_version: raven.resource/v1
+kind: transaction
+id: trx_credit_card_risk_assessment
+name: credit_card_risk_assessment
+display_name: Credit Card Risk Assessment
+state: ready
+description: Transaction workflow for evaluating card authorization risk.

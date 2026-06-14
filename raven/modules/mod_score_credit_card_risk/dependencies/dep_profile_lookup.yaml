@@ -1,0 +1,9 @@
+api_version: raven.resource/v1
+kind: module_dependency
+id: dep_profile_lookup
+name: profile_lookup_dependency
+display_name: Profile Lookup Dependency
+state: ready
+module_id: mod_score_credit_card_risk
+depends_on_module_id: mod_load_cardholder_profile
+description: Risk scoring requires cardholder profile context to be loaded first.

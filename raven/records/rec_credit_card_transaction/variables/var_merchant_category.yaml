@@ -1,0 +1,9 @@
+api_version: raven.resource/v1
+kind: variable
+id: var_merchant_category
+name: merchant_category
+display_name: Merchant Category
+state: ready
+record_id: rec_credit_card_transaction
+data_type: string
+description: Merchant category code or normalized category label.

@@ -1,0 +1,16 @@
+api_version: raven.resource/v1
+kind: module_interface
+id: miface_load_cardholder_profile
+name: load_cardholder_profile_interface
+display_name: Load Cardholder Profile Interface
+state: ready
+module_id: mod_load_cardholder_profile
+input_records:
+  - record_id: rec_credit_card_transaction
+output_records:
+  - module_output_id: mout_cardholder_profile
+    record_id: rec_cardholder_profile
+    value_source: database_read
+    variable_logic_policy:
+      requirement: not_expected
+      coverage_scope: none

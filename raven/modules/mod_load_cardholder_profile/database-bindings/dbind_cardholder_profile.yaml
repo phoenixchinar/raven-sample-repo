@@ -1,0 +1,13 @@
+api_version: raven.resource/v1
+kind: module_database_binding
+id: dbind_cardholder_profile
+name: cardholder_profile_binding
+display_name: Cardholder Profile Binding
+state: ready
+module_id: mod_load_cardholder_profile
+database_id: db_card_risk_history
+database_record_ids:
+  - drec_cardholder_profile
+  - drec_velocity_window
+  - drec_merchant_risk
+description: Binds profile, velocity, and merchant risk data to the profile lookup module.

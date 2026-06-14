@@ -1,0 +1,8 @@
+api_version: raven.resource/v1
+kind: module
+id: mod_score_credit_card_risk
+name: score_credit_card_risk
+display_name: Score Credit Card Risk
+state: ready
+ruleset_id: rs_credit_card_risk
+description: Applies risk rules to transaction and profile context to produce a decision.

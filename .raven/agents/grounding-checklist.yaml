@@ -1,0 +1,20 @@
+version: raven.agent-grounding/v1
+project_id: raven-sample-repo
+required_reads:
+  - raven.config
+  - .raven/context/source-anchors.yaml
+  - .raven/validation/gates.yaml
+rules:
+  - Use IDs, not display names, for relationships.
+  - Keep authored resources under the configured resource_root.
+  - Do not add JSON resources or retired compatibility files.
+  - Review native Git diff before accepting generated patches.
+allowed_roots:
+  - raven/
+  - .raven/
+  - raven.config
+  - README.md
+forbidden_roots:
+  - .git/
+  - .env
+  - .raven/local/

@@ -1,0 +1,11 @@
+api_version: raven.resource/v1
+kind: database_record
+id: drec_velocity_window
+name: velocity_window
+display_name: Velocity Window Table
+state: ready
+database_id: db_card_risk_history
+record_id: rec_credit_card_transaction
+key_variable_ids:
+  - var_transaction_velocity_1h
+description: Aggregated authorization attempts for short-window velocity checks.

@@ -1,0 +1,12 @@
+api_version: raven.resource/v1
+kind: database_record
+id: drec_merchant_risk
+name: merchant_risk
+display_name: Merchant Risk Table
+state: ready
+database_id: db_card_risk_history
+record_id: rec_credit_card_transaction
+key_variable_ids:
+  - var_merchant_category
+  - var_merchant_country
+description: Merchant category and country risk reference data.

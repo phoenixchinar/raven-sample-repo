@@ -1,0 +1,15 @@
+version: raven.source-anchors/v1
+project_id: raven-sample-repo
+anchors:
+  - id: credit_card_transaction_inputs
+    path: raven/records/rec_credit_card_transaction.yaml
+    description: Incoming transaction facts used by the risk scoring workflow.
+  - id: cardholder_profile_lookup
+    path: raven/modules/mod_load_cardholder_profile/interface.yaml
+    description: Database-read module that hydrates cardholder context.
+  - id: credit_card_risk_policy
+    path: raven/rulesets/rs_credit_card_risk.yaml
+    description: Ruleset used by the risk scoring module.
+  - id: risk_assessment_outputs
+    path: raven/records/rec_risk_assessment.yaml
+    description: Computed decision outputs produced by the scoring module.

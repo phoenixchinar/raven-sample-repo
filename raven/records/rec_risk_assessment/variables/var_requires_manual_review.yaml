@@ -1,0 +1,9 @@
+api_version: raven.resource/v1
+kind: variable
+id: var_requires_manual_review
+name: requires_manual_review
+display_name: Requires Manual Review
+state: ready
+record_id: rec_risk_assessment
+data_type: boolean
+description: Indicates whether the transaction should enter manual review.

@@ -1,0 +1,7 @@
+api_version: raven.resource/v1
+kind: ruleset
+id: rs_credit_card_risk
+name: credit_card_risk
+display_name: Credit Card Risk Policy
+state: ready
+description: Policy rules that contribute to credit card transaction risk scoring.

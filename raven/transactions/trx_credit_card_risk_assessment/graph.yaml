@@ -1,0 +1,15 @@
+api_version: raven.resource/v1
+kind: transaction_graph
+id: tgraph_credit_card_risk_assessment
+name: credit_card_risk_assessment_graph
+display_name: Credit Card Risk Assessment Graph
+state: ready
+transaction_id: trx_credit_card_risk_assessment
+nodes:
+  - id: node_load_profile
+    module_id: mod_load_cardholder_profile
+  - id: node_score_risk
+    module_id: mod_score_credit_card_risk
+edges:
+  - from: node_load_profile
+    to: node_score_risk

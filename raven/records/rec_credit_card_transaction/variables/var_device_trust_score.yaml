@@ -1,0 +1,9 @@
+api_version: raven.resource/v1
+kind: variable
+id: var_device_trust_score
+name: device_trust_score
+display_name: Device Trust Score
+state: ready
+record_id: rec_credit_card_transaction
+data_type: decimal
+description: Normalized trust score for the device or channel context.

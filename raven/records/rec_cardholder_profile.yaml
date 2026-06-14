@@ -1,0 +1,7 @@
+api_version: raven.resource/v1
+kind: record
+id: rec_cardholder_profile
+name: cardholder_profile
+display_name: Cardholder Profile
+state: ready
+description: Historical and profile context read from the card risk database.

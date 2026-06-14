@@ -1,0 +1,7 @@
+api_version: raven.resource/v1
+kind: module
+id: mod_load_cardholder_profile
+name: load_cardholder_profile
+display_name: Load Cardholder Profile
+state: ready
+description: Reads cardholder profile and recent history context before scoring.

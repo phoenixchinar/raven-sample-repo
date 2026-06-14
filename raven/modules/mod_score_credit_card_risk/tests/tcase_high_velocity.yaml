@@ -1,0 +1,17 @@
+api_version: raven.resource/v1
+kind: module_test_case
+id: tcase_high_velocity
+name: high_velocity_review
+display_name: High Velocity Review
+state: ready
+module_id: mod_score_credit_card_risk
+input_record_ids:
+  - rec_credit_card_transaction
+  - rec_cardholder_profile
+expected_output_record_id: rec_risk_assessment
+expected_output_variable_ids:
+  - var_risk_score
+  - var_risk_decision
+  - var_risk_reason_code
+  - var_requires_manual_review
+description: A high-velocity card-not-present transaction should produce a review decision.

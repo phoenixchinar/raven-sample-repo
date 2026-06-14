@@ -1,0 +1,24 @@
+api_version: raven.resource/v1
+kind: module_interface
+id: miface_score_credit_card_risk
+name: score_credit_card_risk_interface
+display_name: Score Credit Card Risk Interface
+state: ready
+module_id: mod_score_credit_card_risk
+input_records:
+  - record_id: rec_credit_card_transaction
+  - record_id: rec_cardholder_profile
+output_records:
+  - module_output_id: mout_risk_assessment
+    record_id: rec_risk_assessment
+    value_source: computed
+    variable_logic_policy:
+      requirement: required
+      coverage_scope: all_record_variables
+      required_variable_ids:
+        - var_risk_score
+        - var_risk_decision
+        - var_risk_reason_code
+        - var_requires_manual_review
+      ignored_variable_ids: []
+      allow_compute_override_when_not_expected: false

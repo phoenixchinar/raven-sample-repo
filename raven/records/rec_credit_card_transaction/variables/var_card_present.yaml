@@ -1,0 +1,9 @@
+api_version: raven.resource/v1
+kind: variable
+id: var_card_present
+name: card_present
+display_name: Card Present
+state: ready
+record_id: rec_credit_card_transaction
+data_type: boolean
+description: Indicates whether the card was physically present.

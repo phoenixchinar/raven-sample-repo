@@ -1,0 +1,7 @@
+api_version: raven.resource/v1
+kind: database
+id: db_card_risk_history
+name: card_risk_history
+display_name: Card Risk History
+state: ready
+description: Local risk history database used by the cardholder profile lookup module.

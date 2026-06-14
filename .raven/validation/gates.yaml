@@ -1,0 +1,15 @@
+version: raven.validation-gates/v1
+project_id: raven-sample-repo
+gates:
+  - id: schema
+    required: true
+    description: Every authored YAML resource matches the v1 resource schema.
+  - id: graph
+    required: true
+    description: Every relationship uses immutable IDs and resolves inside the repo.
+  - id: coverage
+    required: true
+    description: Required computed module outputs have attached ready variable logic.
+  - id: native_git_diff_review
+    required: true
+    description: Authoring changes are reviewed through Git diff before commit.

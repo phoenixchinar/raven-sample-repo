@@ -1,0 +1,9 @@
+api_version: raven.resource/v1
+kind: variable
+id: var_customer_risk_tier
+name: customer_risk_tier
+display_name: Customer Risk Tier
+state: ready
+record_id: rec_credit_card_transaction
+data_type: string
+description: Current customer risk tier from the issuing bank profile.

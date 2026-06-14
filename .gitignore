@@ -1,0 +1,5 @@
+.raven/local/*
+!.raven/local/README.md
+
+*.log
+.DS_Store

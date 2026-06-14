@@ -1,0 +1,13 @@
+api_version: raven.resource/v1
+kind: rule
+id: rule_low_device_trust
+name: low_device_trust
+display_name: Low Device Trust
+state: ready
+ruleset_id: rs_credit_card_risk
+input_variable_ids:
+  - var_card_present
+  - var_device_trust_score
+outcome: add_risk_points
+points: 20
+description: Adds risk for card-not-present transactions from low-trust devices.

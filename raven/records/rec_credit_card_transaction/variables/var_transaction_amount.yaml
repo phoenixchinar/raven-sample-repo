@@ -1,0 +1,10 @@
+api_version: raven.resource/v1
+kind: variable
+id: var_transaction_amount
+name: transaction_amount
+display_name: Transaction Amount
+state: ready
+record_id: rec_credit_card_transaction
+data_type: decimal
+unit: USD
+description: Authorized amount requested by the merchant.

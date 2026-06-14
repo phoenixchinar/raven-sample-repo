@@ -1,0 +1,9 @@
+api_version: raven.resource/v1
+kind: variable
+id: var_risk_score
+name: risk_score
+display_name: Risk Score
+state: ready
+record_id: rec_risk_assessment
+data_type: integer
+description: Final normalized risk score from 0 to 100.

@@ -1,0 +1,11 @@
+api_version: raven.resource/v1
+kind: database_record
+id: drec_cardholder_profile
+name: cardholder_profile
+display_name: Cardholder Profile Table
+state: ready
+database_id: db_card_risk_history
+record_id: rec_cardholder_profile
+key_variable_ids:
+  - var_customer_risk_tier
+description: Profile and historical risk facts for a cardholder.

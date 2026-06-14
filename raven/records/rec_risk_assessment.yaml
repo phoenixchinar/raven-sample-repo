@@ -1,0 +1,7 @@
+api_version: raven.resource/v1
+kind: record
+id: rec_risk_assessment
+name: risk_assessment
+display_name: Risk Assessment
+state: ready
+description: Computed risk outcome for the credit card transaction.
