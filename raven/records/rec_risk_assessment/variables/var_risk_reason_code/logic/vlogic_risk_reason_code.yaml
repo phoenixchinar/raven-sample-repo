@@ -10,11 +10,12 @@ execution_role: compute_output_variable
 document:
   format: raven_text_logic_v1
   source: |
-    SET RiskAssessment.risk_reason_code =
-      "velocity_spike" WHEN Transaction.transaction_velocity_1h >= 5
-      ELSE "amount_outlier" WHEN Transaction.transaction_amount > Profile.average_ticket_amount * 4
-      ELSE "low_device_trust" WHEN Transaction.device_trust_score < 0.50
+    SET RiskAssessment.risk_reason_code = CASE
+      WHEN Transaction.transaction_velocity_1h >= 5 THEN "velocity_spike"
+      WHEN Transaction.transaction_amount > Profile.average_ticket_amount * 4 THEN "amount_outlier"
+      WHEN Transaction.device_trust_score < 0.50 THEN "low_device_trust"
       ELSE "profile_history"
+    END
 module_attachment:
   status: attached
   module_id: mod_score_credit_card_risk

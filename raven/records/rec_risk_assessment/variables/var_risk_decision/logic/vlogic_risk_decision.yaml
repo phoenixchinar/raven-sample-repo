@@ -10,10 +10,11 @@ execution_role: compute_output_variable
 document:
   format: raven_text_logic_v1
   source: |
-    SET RiskAssessment.risk_decision =
-      "decline" WHEN RiskAssessment.risk_score >= 85
-      ELSE "review" WHEN RiskAssessment.risk_score >= 60
+    SET RiskAssessment.risk_decision = CASE
+      WHEN RiskAssessment.risk_score >= 85 THEN "decline"
+      WHEN RiskAssessment.risk_score >= 60 THEN "review"
       ELSE "approve"
+    END
 module_attachment:
   status: attached
   module_id: mod_score_credit_card_risk
